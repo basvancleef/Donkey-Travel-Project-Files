@@ -36,7 +36,7 @@ const logout = () => {
         <JetBanner />
 
         <div class="min-h-screen relative flex bg-gray-100">
-            <nav class="bg-gray-800 text-white lg:w-64">
+            <nav class="bg-gray-800 w-64">
                 <!-- Primary Navigation Menu -->
                 <div class="w-64 px-4 sm:px-6 lg:px-8">
                     <div class="flex flex-col">
@@ -74,9 +74,9 @@ const logout = () => {
                                     Profile
                                 </JetNavLink>
                                 <form @submit.prevent="logout">
-                                    <JetNavLink as="button">
+                                    <JetDropdownLink as="button">
                                         Log Out
-                                    </JetNavLink>
+                                    </JetDropdownLink>
                                 </form>
                             </div>
                         </div>
