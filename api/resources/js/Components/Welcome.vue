@@ -7,7 +7,7 @@
         <div class="flex flex-col gap-y-6 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-4 p-10">
             <!-- WELCOME MESSAGE -->
             <div class="w-full row-span-1 bg-white shadow-md rounded-2xl p-24 lg:h-60 lg:col-span-2 ">
-                <h1 class="lg:text-4xl font-bold text-black text-3xl">Welcome, Bas🎉</h1>
+                <h1 class="lg:text-4xl font-bold text-black text-3xl">Welcome, {{ $page.props.user.name }}🎉</h1>
             </div>
 
             <!-- WEATHER API-->
