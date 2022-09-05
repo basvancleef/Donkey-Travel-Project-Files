@@ -12,9 +12,9 @@ import Welcome from '@/Components/Welcome.vue';
         </template> -->
 
         <div class="container mx-auto lg:p-10">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <Welcome />
-            </div>
+            <!-- <div> -->
+            <Welcome />
+            <!-- </div> -->
         </div>
     </AppLayout>
 </template>
