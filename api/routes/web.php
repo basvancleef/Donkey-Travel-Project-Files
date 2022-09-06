@@ -35,4 +35,7 @@ Route::middleware([
     Route::get('/overzicht', function () {
         return Inertia::render('Booking/Overzicht');
     })->name('overzicht');
+    Route::get('/gebruikers', function () {
+        return Inertia::render('Users/Gebruikers');
+    })->name('gebruikers');
 });

@@ -33,7 +33,7 @@ const navigation = [
     { name: 'Track & Trace', href: 'http://localhost/track-and-trace', icon: MapIcon, current: false },
 ]
 const userNavigation = [
-    { name: 'Profiel', href: '#' },
+    { name: 'Profiel', href: 'http://localhost/user/profile' },
     { name: 'Log uit', href: '#' },
 ]
 
