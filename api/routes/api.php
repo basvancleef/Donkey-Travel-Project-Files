@@ -1,5 +1,6 @@
 <?php
 
+use Database\Factories\UserFactory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,5 +22,3 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/user/{id}', function ($id) {
     return 'User '.$id;
 });
-
-Route::get('/users', [Controller::class, "getAll"]);
