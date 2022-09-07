@@ -5,8 +5,7 @@
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="" />
+            <img class="h-8 w-auto mt-4 sm:h-10" src="../assets/logo/logo.svg" alt="" />
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
@@ -18,7 +17,7 @@
         </div>
         <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
 
-          <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</a>
+          <nuxt-link to="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</nuxt-link>
           <a href="/over-ons" class="text-base font-medium text-gray-500 hover:text-gray-900">Over ons</a>
           <a href="/reserveren" class="text-base font-medium text-gray-500 hover:text-gray-900">Reserveren</a>
           <a href="/contact" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>

@@ -31,12 +31,12 @@
                   massa, lectus. Diam rutrum posuere donec ultricies non morbi. Mi a platea auctor mi.</p>
               </div>
               <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
-                <div class="rounded-md shadow"> <a href="#"
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Contact
-                    sales</a> </div>
-                <div class="ml-4 rounded-md shadow"> <a href="#"
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Learn
-                    more</a> </div>
+                <div class="rounded-md shadow"> <a href="/contact"
+                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Contact</a>
+                </div>
+                <div class="ml-4 rounded-md shadow"> <a href="/reserveren"
+                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Reserveer
+                    nu!</a> </div>
               </div>
             </div>
             <div class="relative mx-auto mt-12 max-w-prose text-base lg:mt-0 lg:max-w-none"> <svg
