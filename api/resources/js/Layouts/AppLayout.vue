@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import { Inertia } from '@inertiajs/inertia';
 import {
     Dialog,
     DialogPanel,
@@ -34,8 +35,11 @@ const navigation = [
 ]
 const userNavigation = [
     { name: 'Profiel', href: 'http://localhost/user/profile' },
-    { name: 'Log uit', href: '#' },
 ]
+
+defineProps({
+    title: String,
+});
 
 const logout = () => {
     Inertia.post(route('logout'));
@@ -152,11 +156,17 @@ const sidebarOpen = ref(false)
                                 <MenuItems
                                     class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                                    <a :href="item.href" @submit.prevent="logout"
+                                    <a :href="item.href"
                                         :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
                                         {{
-        item.name
+                                                item.name
                                         }}</a>
+                                    </MenuItem>
+                                    <MenuItem>
+                                    <form method="POST" @submit.prevent="logout"
+                                        :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100']">
+                                        <button type="submit">Log uit</button>
+                                    </form>
                                     </MenuItem>
                                 </MenuItems>
                             </transition>
