@@ -1,159 +1,190 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
 import { Inertia } from '@inertiajs/inertia';
-import { Head, Link } from '@inertiajs/inertia-vue3';
-import JetApplicationMark from '@/Components/ApplicationMark.vue';
-import JetBanner from '@/Components/Banner.vue';
-import JetDropdown from '@/Components/Dropdown.vue';
-import JetDropdownLink from '@/Components/DropdownLink.vue';
-import JetNavLink from '@/Components/NavLink.vue';
-import JetResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import {
+    Dialog,
+    DialogPanel,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuItems,
+    TransitionChild,
+    TransitionRoot,
+} from '@headlessui/vue'
+import {
+    Bars3BottomLeftIcon,
+    BellIcon,
+    CalendarIcon,
+    ChartBarIcon,
+    FolderIcon,
+    HomeIcon,
+    InboxIcon,
+    UsersIcon,
+    MapIcon,
+    XMarkIcon,
+    EyeIcon,
+} from '@heroicons/vue/24/outline'
+import { MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
+
+const navigation = [
+    { name: 'Home', href: 'http://localhost/dashboard', icon: HomeIcon, current: false },
+    { name: 'Boekingen', href: 'http://localhost/boekingen', icon: CalendarIcon, current: false },
+    { name: 'Overzicht', href: 'http://localhost/overzicht', icon: EyeIcon, current: false },
+    { name: 'Gebruikers', href: 'http://localhost/gebruikers', icon: UsersIcon, current: false },
+    { name: 'Track & Trace', href: 'http://localhost/track-and-trace', icon: MapIcon, current: false },
+]
+const userNavigation = [
+    { name: 'Profiel', href: 'http://localhost/user/profile' },
+]
 
 defineProps({
     title: String,
 });
 
-const showingNavigationDropdown = ref(false);
-
-const switchToTeam = (team) => {
-    Inertia.put(route('current-team.update'), {
-        team_id: team.id,
-    }, {
-        preserveState: false,
-    });
-};
-
 const logout = () => {
     Inertia.post(route('logout'));
 };
+
+const sidebarOpen = ref(false)
 </script>
 
-<template>
+    <template>
     <div>
 
         <Head :title="title" />
 
-        <JetBanner />
+        <TransitionRoot as="template" :show="sidebarOpen">
+            <Dialog as="div" class="relative z-40 md:hidden" @close="sidebarOpen = false">
+                <TransitionChild as="template" enter="transition-opacity ease-linear duration-300"
+                    enter-from="opacity-0" enter-to="opacity-100" leave="transition-opacity ease-linear duration-300"
+                    leave-from="opacity-100" leave-to="opacity-0">
+                    <div class="fixed inset-0 bg-gray-600 bg-opacity-75" />
+                </TransitionChild>
 
-        <div class="min-h-screen relative flex bg-gray-100">
-            <nav class="bg-gray-800 w-64">
-                <!-- Primary Navigation Menu -->
-                <div class="w-64 px-4 sm:px-6 lg:px-8">
-                    <div class="flex flex-col">
-                        <div class="flex flex-col">
-                            <!-- Logo -->
-                            <div class="shrink-0 flex flex-col items-center">
-                                <Link :href="route('dashboard')">
-                                <JetApplicationMark class="block h-9 w-auto" />
-                                </Link>
+                <div class="fixed inset-0 z-40 flex">
+                    <TransitionChild as="template" enter="transition ease-in-out duration-300 transform"
+                        enter-from="-translate-x-full" enter-to="translate-x-0"
+                        leave="transition ease-in-out duration-300 transform" leave-from="translate-x-0"
+                        leave-to="-translate-x-full">
+                        <DialogPanel class="relative flex w-full max-w-xs flex-1 flex-col bg-white pt-5 pb-4">
+                            <TransitionChild as="template" enter="ease-in-out duration-300" enter-from="opacity-0"
+                                enter-to="opacity-100" leave="ease-in-out duration-300" leave-from="opacity-100"
+                                leave-to="opacity-0">
+                                <div class="absolute top-0 right-0 -mr-12 pt-2">
+                                    <button type="button"
+                                        class="ml-1 flex h-10 w-10 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                        @click="sidebarOpen = false">
+                                        <span class="sr-only">Close sidebar</span>
+                                        <XMarkIcon class="h-6 w-6 text-white" aria-hidden="true" />
+                                    </button>
+                                </div>
+                            </TransitionChild>
+                            <div class="flex flex-shrink-0 items-center px-4">
+                                <img class="h-8 w-auto" src="http://localhost:3000/_nuxt/assets/logo/logo.svg"
+                                    alt="Donkey Travel" />
                             </div>
-
-                            <!-- Navigation Links -->
-                            <div class="hidden lg:flex lg:flex-col">
-                                <h2 class="pt-2">Home</h2>
-                                <hr>
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </JetNavLink>
-
-                                <h2 class="pt-2">Reserveren</h2>
-                                <hr>
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </JetNavLink>
-
-                                <h2 class="pt-2">Begeleiding</h2>
-                                <hr>
-                                <JetNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
-                                </JetNavLink>
-
-                                <h2 class="pt-2">Profile</h2>
-                                <hr>
-                                <JetNavLink :href="route('profile.show')">
-                                    Profile
-                                </JetNavLink>
-                                <form @submit.prevent="logout">
-                                    <JetDropdownLink as="button">
-                                        Log Out
-                                    </JetDropdownLink>
-                                </form>
+                            <div class="mt-5 h-0 flex-1 overflow-y-auto">
+                                <nav class="space-y-1 px-2">
+                                    <a v-for="item in navigation" :key="item.name" :href="item.href"
+                                        :class="[item.current ? 'bg-indigo-800 text-white' : 'text-black hover:bg-red-600 hover:text-white', 'group flex items-center px-2 py-2 text-base font-medium rounded-md']">
+                                        <component :is="item.icon" class="mr-4 h-6 w-6 flex-shrink-0"
+                                            aria-hidden="true" />
+                                        {{ item.name }}
+                                    </a>
+                                </nav>
                             </div>
-                        </div>
-
-                        <!-- Hamburger -->
-                        <div class="-mr-2 flex items-center sm:hidden">
-                            <button
-                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition"
-                                @click="showingNavigationDropdown = !showingNavigationDropdown">
-                                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                                    <path
-                                        :class="{ 'hidden': showingNavigationDropdown, 'inline-flex': !showingNavigationDropdown }"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16" />
-                                    <path
-                                        :class="{ 'hidden': !showingNavigationDropdown, 'inline-flex': showingNavigationDropdown }"
-                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            </button>
-                        </div>
+                        </DialogPanel>
+                    </TransitionChild>
+                    <div class="w-14 flex-shrink-0" aria-hidden="true">
+                        <!-- Dummy element to force sidebar to shrink to fit close icon -->
                     </div>
                 </div>
+            </Dialog>
+        </TransitionRoot>
 
-                <!-- Responsive Navigation Menu -->
-                <div :class="{ 'block': showingNavigationDropdown, 'hidden': !showingNavigationDropdown }"
-                    class="sm:hidden">
-                    <div class="pt-2 pb-3 space-y-1">
-                        <JetResponsiveNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
-                        </JetResponsiveNavLink>
-                    </div>
+        <!-- Static sidebar for desktop -->
+        <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
+            <!-- Sidebar component, swap this element with another sidebar if you like -->
+            <div class="flex flex-grow flex-col overflow-y-auto bg-white border pt-2">
+                <div class="flex flex-shrink-0 items-center p-4">
+                    <img class="h-8 w-auto" src="http://localhost:3000/_nuxt/assets/logo/logo.svg"
+                        alt="Donkey Travel" />
+                </div>
+                <div class="mt-5 flex flex-1 flex-col">
+                    <nav class="flex-1 space-y-1 px-2 pb-4 ">
+                        <a v-for="item in navigation" :key="item.name" :href="item.href"
+                            :class="[item.current ? 'bg-indigo-800 text-white' : 'text-black hover:bg-red-600 hover:text-white', 'group flex items-center px-2 py-2 text-sm font-medium rounded-md']">
+                            <component :is="item.icon" class="mr-3 h-6 w-6 flex-shrink-0" aria-hidden="true" />
+                            {{ item.name }}
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-1 flex-col md:pl-64">
+            <div class="sticky top-0 z-10 flex h-16 flex-shrink-0 bg-white border">
+                <button type="button"
+                    class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden"
+                    @click="sidebarOpen = true">
+                    <span class="sr-only">Open sidebar</span>
+                    <Bars3BottomLeftIcon class="h-6 w-6" aria-hidden="true" />
+                </button>
+                <div class="flex flex-1 justify-end md:pr-12 px-4">
+                    <div class="ml-4 flex items-center md:ml-6">
+                        <button type="button"
+                            class="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                            <span class="sr-only">View notifications</span>
+                            <BellIcon class="h-6 w-6" aria-hidden="true" />
+                        </button>
 
-                    <!-- Responsive Settings Options -->
-                    <div class="pt-4 pb-1 border-t border-gray-200">
-                        <div class="flex items-center px-4">
-                            <div v-if="$page.props.jetstream.managesProfilePhotos" class="shrink-0 mr-3">
-                                <img class="h-10 w-10 rounded-full object-cover"
-                                    :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name">
-                            </div>
-
+                        <!-- Profile dropdown -->
+                        <Menu as="div" class="relative ml-3">
                             <div>
-                                <div class="font-medium text-base text-gray-800">
-                                    {{ $page.props.user.name }}
-                                </div>
-                                <div class="font-medium text-sm text-gray-500">
-                                    {{ $page.props.user.email }}
-                                </div>
+                                <MenuButton
+                                    class="flex max-w-xs items-center rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" :src="$page.props.user.profile_photo_url"
+                                        :alt="$page.props.user.name" />
+                                </MenuButton>
                             </div>
-                        </div>
-
-                        <div class="mt-3 space-y-1">
-                            <JetResponsiveNavLink :href="route('profile.show')"
-                                :active="route().current('profile.show')">
-                                Profile
-                            </JetResponsiveNavLink>
-                            <!-- Authentication -->
-                            <form method="POST" @submit.prevent="logout">
-                                <JetResponsiveNavLink as="button">
-                                    Log Out
-                                </JetResponsiveNavLink>
-                            </form>
-                        </div>
+                            <transition enter-active-class="transition ease-out duration-100"
+                                enter-from-class="transform opacity-0 scale-95"
+                                enter-to-class="transform opacity-100 scale-100"
+                                leave-active-class="transition ease-in duration-75"
+                                leave-from-class="transform opacity-100 scale-100"
+                                leave-to-class="transform opacity-0 scale-95">
+                                <MenuItems
+                                    class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                    <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
+                                    <a :href="item.href"
+                                        :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
+                                        {{
+                                                item.name
+                                        }}</a>
+                                    </MenuItem>
+                                    <MenuItem>
+                                    <form method="POST" @submit.prevent="logout"
+                                        :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100']">
+                                        <button type="submit">Log uit</button>
+                                    </form>
+                                    </MenuItem>
+                                </MenuItems>
+                            </transition>
+                        </Menu>
                     </div>
                 </div>
-            </nav>
+            </div>
 
-            <!-- Page Heading -->
-            <header v-if="$slots.header" class="bg-white shadow">
-                <div class="min-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
-
-            <!-- Page Content -->
             <main>
-                <slot />
+                <div class="bg-gray-100">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+                        <!-- Replace with your content -->
+                        <div class="py-2">
+                            <slot />
+                        </div>
+                        <!-- /End replace -->
+                    </div>
+                </div>
             </main>
         </div>
     </div>

@@ -1,18 +1,14 @@
-<script setup>
-// const { data: weather } = await useFetch('https://api.openweathermap.org/data/2.5/weather?q=Lienden&appid=c7c20096d659d7458bddefab9f51f475');
-</script>
-
 <template>
     <div>
-        <div class="flex flex-col gap-y-6 lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-4 p-10">
+        <div class="flex flex-col lg:grid lg:grid-cols-3 lg:grid-rows-3 lg:gap-4">
             <!-- WELCOME MESSAGE -->
             <div class="w-full row-span-1 bg-white shadow-md rounded-2xl p-24 lg:h-60 lg:col-span-2 ">
                 <h1 class="lg:text-4xl font-bold text-black text-3xl">Welcome, {{ $page.props.user.name }}🎉</h1>
             </div>
 
             <!-- WEATHER API-->
-            <div class="w-full h-60 row-span-1 bg-white shadow-md rounded-2xl py-5 px-14">
-                <!-- <div v-if="weather.weather">
+            <div class="w-full h-60 row-span-1 bg-white shadow-md rounded-2xl px-10 p-10">
+                <div>
                     <div class="text-center">
                         <span class="text-4xl font-medium">{{ weather.name }}</span>
                         <div class="grid grid-cols-2 py-10">
@@ -22,7 +18,7 @@
                                 &deg;C</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <!-- QUOTE API -->
@@ -44,3 +40,17 @@
         </div>
     </div>
 </template>
+
+<script>
+
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/inertia-vue3'
+
+export default {
+    setup() {
+        const weather = computed(() => JSON.parse(usePage().props.value.weather))
+        return { weather }
+    },
+}
+
+</script>
