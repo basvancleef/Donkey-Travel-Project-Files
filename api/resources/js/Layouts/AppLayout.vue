@@ -76,9 +76,7 @@ const sidebarOpen = ref(false)
                                 </div>
                             </TransitionChild>
                             <div class="flex flex-shrink-0 items-center px-4">
-                                <img class="h-8 w-auto"
-                                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-                                    alt="Your Company" />
+                                <img class="h-8 w-auto" src="@/nuxt/assets/logo/logo.svg" alt="Donkey Travel" />
                             </div>
                             <div class="mt-5 h-0 flex-1 overflow-y-auto">
                                 <nav class="space-y-1 px-2">
@@ -104,8 +102,9 @@ const sidebarOpen = ref(false)
             <!-- Sidebar component, swap this element with another sidebar if you like -->
             <div class="flex flex-grow flex-col overflow-y-auto bg-[#1a1c23] pt-5">
                 <div class="flex flex-shrink-0 items-center px-4">
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=300"
-                        alt="Your Company" />
+                    <img class="h-8 w-auto"
+                        src="https://github.com/basvancleef/Donkey-Travel-Project-Files/blob/feature/bas/api/resources/assets/logo/logo.svg"
+                        alt="Donkey Travel" />
                 </div>
                 <div class="mt-5 flex flex-1 flex-col">
                     <nav class="flex-1 space-y-1 px-2 pb-4">
