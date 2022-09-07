@@ -33,7 +33,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard', [
-            'weather' => Http::get('https://api.openweathermap.org/data/2.5/weather?q=Lienden&appid=c7c20096d659d7458bddefab9f51f475')->body(),
+            'weather' => Http::get('https://api.openweathermap.org/data/2.5/weather?q=Tiel&appid=c7c20096d659d7458bddefab9f51f475')->body(),
         ]);
     })->name('dashboard');
     Route::get('/overzicht', function () {

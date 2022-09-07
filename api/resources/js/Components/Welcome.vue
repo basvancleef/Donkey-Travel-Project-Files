@@ -6,26 +6,19 @@
                 <h1 class="lg:text-4xl font-bold text-black text-3xl">Welcome, {{ $page.props.user.name }}🎉</h1>
             </div>
 
-            <p v-for="user in users" :key="user.id">
-                {{ user.name }}
-            </p>
-
             <!-- WEATHER API-->
-            <div class="w-full h-60 row-span-1 bg-white shadow-md rounded-2xl py-5 px-14">
-                {{ weather.name }}
-                <!-- <div v-if="$page.props.weather">
+            <div class="w-full h-60 row-span-1 bg-white shadow-md rounded-2xl px-10 p-10">
+                <div>
                     <div class="text-center">
-                        <span class="text-4xl font-medium">{{ $page.props.weather.name }}</span>
+                        <span class="text-4xl font-medium">{{ weather.name }}</span>
                         <div class="grid grid-cols-2 py-10">
                             <img class="col-span-1"
-                                :src="`https://openweathermap.org/img/w/${$page.props.weather.weather[0].icon}.png`">
-                            <span class="col-span-1 text-4xl font-medium">{{ Math.round($page.props.weather.main.temp -
-                                    273)
-                            }}
+                                :src="`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`">
+                            <span class="col-span-1 text-4xl font-medium">{{ Math.round(weather.main.temp - 273) }}
                                 &deg;C</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
 
             <!-- QUOTE API -->
@@ -56,8 +49,7 @@ import { usePage } from '@inertiajs/inertia-vue3'
 export default {
     setup() {
         const weather = computed(() => JSON.parse(usePage().props.value.weather))
-        const users = computed(() => usePage().props.value.users)
-        return { weather, users }
+        return { weather }
     },
 }
 
