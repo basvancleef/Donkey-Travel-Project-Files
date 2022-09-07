@@ -9,29 +9,21 @@
       </svg>
 
       <div class="relative">
-        <img class="mx-auto h-8"
-          src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg"
-          alt="Workcation" />
+        <span class="mt-2 block text-center text-3xl font-bold leading-8
+          tracking-tight text-gray-900 sm:text-4xl">Recensies
+        </span>
         <blockquote class="mt-10">
           <div class="mx-auto max-w-3xl text-center text-2xl font-medium leading-9 text-gray-900">
-            <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente
-              alias molestiae. Numquam corrupti in laborum sed rerum et corporis.&rdquo;</p>
+            <p>&ldquo;Toen er een boom over het bospad lag, weigerde onze ezel nog een stap te verzetten. We waren erg
+              blij met de assistentie van Donkey Travel!&rdquo;</p>
           </div>
           <footer class="mt-8">
             <div class="md:flex md:items-center md:justify-center">
               <div class="md:flex-shrink-0">
-                <img class="mx-auto h-10 w-10 rounded-full"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="" />
+                <img class="mx-auto h-10 object-contain w-10 rounded-full" src="@/assets/img/user.jpg" alt="" />
               </div>
               <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                <div class="text-base font-medium text-gray-900">Judith Black</div>
-
-                <svg class="mx-1 hidden h-5 w-5 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M11 0h3L9 20H6l5-20z" />
-                </svg>
-
-                <div class="text-base font-medium text-gray-500">CEO, Workcation</div>
+                <div class="text-base font-medium text-gray-900">Max en Ine uit Voorthuizen</div>
               </div>
             </div>
           </footer>

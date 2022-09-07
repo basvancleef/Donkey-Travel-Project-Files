@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-prose text-lg mt-28">
       <h1>
         <span class="block text-center text-lg font-semibold
-          text-indigo-600">OVER ONS
+          text-red-600">OVER ONS
         </span>
         <span class="mt-2 block text-center text-3xl font-bold leading-8
           tracking-tight text-gray-900 sm:text-4xl">Wat doen wij?

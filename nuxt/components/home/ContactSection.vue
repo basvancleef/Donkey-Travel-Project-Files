@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="antialiased font-sans bg-gray-200 overflow-hidden">
+    <div class="antialiased font-sans bg-[#E8DCD1] overflow-hidden">
       <div class="" style="">
-        <div class="relative bg-white">
+        <div class="relative bg-[#E8DCD1]">
           <div class="absolute inset-0">
-            <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+            <div class="absolute inset-y-0 left-0 w-1/2 bg-[#E8DCD1]"></div>
           </div>
           <div class="relative mx-auto
             max-w-7xl lg:grid lg:grid-cols-5">
-            <div class="bg-gray-50 py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8
+            <div class="bg-[#E8DCD1] py-16 px-4 sm:px-6 lg:col-span-2 lg:px-8
               lg:py-24 xl:pr-12">
               <div class="mx-auto max-w-lg">
                 <h2 class="text-2xl font-bold tracking-tight
@@ -52,7 +52,7 @@
                 </dl>
               </div>
             </div>
-            <div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8
+            <div class="bg-[#E8DCD1] py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8
               xl:pl-12">
               <div class="mx-auto max-w-lg lg:max-w-none">
                 <form action="#" method="POST" class="grid grid-cols-1 gap-y-6">
@@ -74,8 +74,8 @@
                       rows="4" class="block w-full rounded-md border-gray-300 py-3 px-4 placeholder-gray-500 shadow-sm
                       focus:border-indigo-500 focus:ring-indigo-500" placeholder="Message"></textarea> </div>
                   <div> <button type="submit" class="inline-flex justify-center rounded-md border
-                      border-transparent bg-indigo-600 py-3 px-6 text-base font-medium text-white shadow-sm
-                      hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                      border-transparent bg-red-500 py-3 px-6 text-base font-medium text-white shadow-sm
+                      hover:bg-red-600 focus:outline-none focus:ring-2 focus:bg-red-600
                       focus:ring-offset-2">Verzenden</button> </div>
                 </form>
               </div>
