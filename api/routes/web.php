@@ -38,4 +38,7 @@ Route::middleware([
     Route::get('/gebruikers', function () {
         return Inertia::render('Users/Gebruikers');
     })->name('gebruikers');
+    Route::get('/track-and-trace', function () {
+        return Inertia::render('TrackAndTrace/Track-And-Trace');
+    })->name('track-and-trace');
 });

@@ -168,7 +168,7 @@ const sidebarOpen = ref(false)
             </div>
 
             <main>
-                <div class="bg-white">
+                <div class="bg-gray-100">
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                         <!-- Replace with your content -->
                         <div class="py-2">
