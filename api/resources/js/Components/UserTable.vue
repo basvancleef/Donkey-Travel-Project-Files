@@ -54,7 +54,7 @@
                                         </td>
                                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                                             <span
-                                                class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Active</span>
+                                                class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">Admin</span>
                                         </td>
                                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{
                                                 formatDate(user.created_at)
@@ -88,7 +88,6 @@ export default {
     },
     methods: {
         formatDate(dateString) {
-
             const date = dayjs(dateString);
             return date.format("DD-MM-YYYY");
         },

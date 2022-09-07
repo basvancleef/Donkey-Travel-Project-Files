@@ -36,6 +36,9 @@ Route::middleware([
             'weather' => Http::get('https://api.openweathermap.org/data/2.5/weather?q=Tiel&appid=c7c20096d659d7458bddefab9f51f475')->body(),
         ]);
     })->name('dashboard');
+    Route::get('/boekingen', function () {
+        return Inertia::render('Booking/Overzicht');
+    })->name('overzicht');
     Route::get('/overzicht', function () {
         return Inertia::render('Booking/Overzicht');
     })->name('overzicht');
