@@ -4,7 +4,7 @@
       <div class="overflow-hidden bg-white py-16">
         <div class="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
           <div class="mx-auto max-w-prose text-base lg:max-w-none">
-            <h2 class="text-lg font-semibold text-indigo-600">Geschiedenis</h2>
+            <h2 class="text-lg font-semibold text-red-600">Geschiedenis</h2>
             <p class="mt-2 text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">Donkey Travel</p>
           </div>
           <div class="relative z-10 mx-auto max-w-prose text-base lg:mx-0 lg:max-w-5xl lg:pr-72">
@@ -32,10 +32,10 @@
               </div>
               <div class="mx-auto mt-10 flex max-w-prose text-base lg:max-w-none">
                 <div class="rounded-md shadow"> <a href="/contact"
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700">Contact</a>
+                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-5 py-3 text-base font-medium text-white hover:bg-red-700">Contact</a>
                 </div>
                 <div class="ml-4 rounded-md shadow"> <a href="/reserveren"
-                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-gray-50">Reserveer
+                    class="flex w-full items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-red-600 hover:bg-gray-50">Reserveer
                     nu!</a> </div>
               </div>
             </div>
@@ -66,13 +66,13 @@
                       phasellus eu proin massa, lectus.</p>
                   </div>
                 </div> <cite
-                  class="relative flex items-center rounded-b-lg bg-indigo-600 py-5 px-6 not-italic sm:mt-10 sm:items-start sm:py-5 sm:pl-12 sm:pr-10">
+                  class="relative flex items-center rounded-b-lg bg-red-600 py-5 px-6 not-italic sm:mt-10 sm:items-start sm:py-5 sm:pl-12 sm:pr-10">
                   <span
                     class="relative rounded-full border-2 border-white sm:absolute sm:top-0 sm:-translate-y-1/2 sm:transform">
-                    <img class="h-12 w-12 rounded-full bg-indigo-300 sm:h-20 sm:w-20"
+                    <img class="h-12 w-12 rounded-full bg-red-300 sm:h-20 sm:w-20"
                       src="https://www.stichtingpraktijkleren.nl/fileadmin/spl_xapi/CODE-m5WEAVTa/resources/loes.jpg"
                       alt=""> </span>
-                  <span class="relative ml-4 font-semibold leading-6 text-indigo-300 sm:ml-24 sm:pl-1">
+                  <span class="relative ml-4 font-semibold leading-6 text-red-300 sm:ml-24 sm:pl-1">
                     <span class="font-semibold text-white sm:inline">Loes de Korte </span>
                     <span class="sm:inline">Eigenaresse Donkey Travel</span>
                   </span> </cite>

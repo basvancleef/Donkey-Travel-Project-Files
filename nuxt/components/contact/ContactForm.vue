@@ -30,18 +30,18 @@
             <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
               <div> <label for="first-name" class="block text-sm font-medium text-gray-700">Voornaam</label>
                 <div class="mt-1"> <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-red-500 focus:ring-red-500">
                 </div>
               </div>
               <div> <label for="last-name" class="block text-sm font-medium text-gray-700">Achternaam</label>
                 <div class="mt-1"> <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-red-500 focus:ring-red-500">
                 </div>
               </div>
               <div class="sm:col-span-2"> <label for="company"
                   class="block text-sm font-medium text-gray-700">Telefoon</label>
                 <div class="mt-1"> <input type="phone" name="phone" id="phone" autocomplete="organization"
-                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-red-500 focus:ring-red-500">
                 </div>
               </div>
               <div class="sm:col-span-2"> <label for="email"
@@ -64,7 +64,7 @@
               <div class="sm:col-span-2"> <label for="message"
                   class="block text-sm font-medium text-gray-700">Message</label>
                 <div class="mt-1"> <textarea id="message" name="message" rows="4"
-                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                    class="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-red-500 focus:ring-red-500"></textarea>
                 </div>
               </div>
               <div class="sm:col-span-2">
@@ -88,7 +88,7 @@
                 </div>
               </div>
               <div class="sm:col-span-2"> <button type="submit"
-                  class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Verzenden</button>
+                  class="inline-flex w-full items-center justify-center rounded-md border border-transparent bg-red-500 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Verzenden</button>
               </div>
             </form>
           </div>
