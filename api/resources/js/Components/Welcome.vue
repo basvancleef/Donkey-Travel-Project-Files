@@ -12,7 +12,7 @@
                     <div class="text-center">
                         <span class="text-4xl font-medium">{{ weather.name }}</span>
                         <div class="grid grid-cols-2 py-10">
-                            <img class="col-span-1"
+                            <img class="col-span-1 pl-12"
                                 :src="`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`">
                             <span class="col-span-1 text-4xl font-medium">{{ Math.round(weather.main.temp - 273) }}
                                 &deg;C</span>

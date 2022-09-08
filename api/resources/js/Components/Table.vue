@@ -77,7 +77,7 @@
   <script setup>
   const people = [
       {
-          name: 'Siem van Cleef',
+          name: 'Bas van Cleef',
           title: 'Developer',
           department: 'Dev',
           email: 'basvancleef@icloud.com',
