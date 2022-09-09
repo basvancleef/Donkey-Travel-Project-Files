@@ -12,25 +12,37 @@ defineProps({
 
 <template>
 
-    <Head title="Welcome" />
+    <Head title="404" />
 
-    <div class="relative flex justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div v-if="canLogin"
-            class="hidden fixed top-0 right-0 px-6 py-6 sm:block bg-white lg:flex lg:justify-center lg:min-w-full ">
-            <Link v-if="$page.props.user" :href="route('dashboard')"
-                class="text-base text-gray-700 dark:text-gray-500 underline">Dashboard</Link>
-
-            <template v-else>
-                <Link :href="route('login')" class="text-base text-gray-700 dark:text-gray-500 underline">Log in</Link>
-
-                <Link v-if="canRegister" :href="route('register')"
-                    class="ml-4 text-base text-gray-700 dark:text-gray-500 underline">Register</Link>
-            </template>
-        </div>
-
-        <div class="container min-w-full bg-white">
-            <div class="h-[650px]">
-                <img class="max-h-full min-w-full" src="https://via.placeholder.com/1920x1080.png">
+    <div class="antialiased font-sans bg-gray-200 overflow-hidden">
+        <div class="" style="">
+            <div class="h-0 min-h-[896px] bg-white">
+                <div class="flex min-h-full flex-col bg-white pt-16 pb-12">
+                    <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col justify-center px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-shrink-0 justify-center"> <a href="http://localhost:3000/"
+                                class="inline-flex"> <span class="sr-only">Your Company</span> <img class="h-36 w-auto"
+                                    src="https://illustoon.com/photo/dl/6959.png" alt=""> </a>
+                        </div>
+                        <div class="">
+                            <div class="text-center">
+                                <p class="text-base font-semibold text-red-600">404</p>
+                                <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Pagina niet
+                                    gevonden</h1>
+                                <p class="mt-2 text-base text-gray-500">Sorry, deze pagina bestaat niet.</p>
+                                <div class="mt-6"> <a href="http://localhost:3000/"
+                                        class="text-base font-medium text-red-600 hover:text-red-500">Terug naar de
+                                        website<span aria-hidden="true"> &rarr;</span> </a> </div>
+                            </div>
+                        </div>
+                    </main>
+                    <footer class="mx-auto w-full max-w-7xl flex-shrink-0 px-4 sm:px-6 lg:px-8">
+                        <nav class="flex justify-center space-x-4"> <a :href="route('login')"
+                                class="text-sm font-medium text-gray-500 hover:text-gray-600">Login</a> <span
+                                class="inline-block border-l border-gray-300" aria-hidden="true"></span> <a
+                                v-if="canRegister" :href="route('register')"
+                                class="text-sm font-medium text-gray-500 hover:text-gray-600">Registreren</a> </nav>
+                    </footer>
+                </div>
             </div>
         </div>
     </div>
