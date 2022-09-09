@@ -18,10 +18,11 @@
         <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
 
           <nuxt-link to="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</nuxt-link>
-          <a href="/over-ons" class="text-base font-medium text-gray-500 hover:text-gray-900">Over ons</a>
-          <a href="/reserveren" class="text-base font-medium text-gray-500 hover:text-gray-900">Reserveren</a>
-          <a href="/contact" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</a>
-
+          <nuxt-link to="/over-ons" class="text-base font-medium text-gray-500 hover:text-gray-900">Over ons
+          </nuxt-link>
+          <nuxt-link to="/reserveren" class="text-base font-medium text-gray-500 hover:text-gray-900">Reserveren
+          </nuxt-link>
+          <nuxt-link to="/contact" class="text-base font-medium text-gray-500 hover:text-gray-900">Contact</nuxt-link>
 
         </PopoverGroup>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
