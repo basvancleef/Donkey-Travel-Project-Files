@@ -48,7 +48,7 @@ const logout = () => {
 const sidebarOpen = ref(false)
 </script>
 
-    <template>
+<template>
     <div>
 
         <Head :title="title" />
@@ -159,7 +159,7 @@ const sidebarOpen = ref(false)
                                     <a :href="item.href"
                                         :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">
                                         {{
-                                                item.name
+                                        item.name
                                         }}</a>
                                     </MenuItem>
                                     <MenuItem>

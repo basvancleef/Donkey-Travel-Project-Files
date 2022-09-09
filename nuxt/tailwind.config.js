@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'sans': 'Roboto'
-    },
+      sans: 'Roboto',
+  },
     screens: {
       'sm': '340px',
       'md': '768px',
