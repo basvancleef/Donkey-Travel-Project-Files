@@ -96,7 +96,6 @@ const sidebarOpen = ref(false)
                         </DialogPanel>
                     </TransitionChild>
                     <div class="w-14 flex-shrink-0" aria-hidden="true">
-                        <!-- Dummy element to force sidebar to shrink to fit close icon -->
                     </div>
                 </div>
             </Dialog>
@@ -104,7 +103,6 @@ const sidebarOpen = ref(false)
 
         <!-- Static sidebar for desktop -->
         <div class="hidden md:fixed md:inset-y-0 md:flex md:w-64 md:flex-col">
-            <!-- Sidebar component, swap this element with another sidebar if you like -->
             <div class="flex flex-grow flex-col overflow-y-auto bg-white border pt-2">
                 <div class="flex flex-shrink-0 items-center p-4">
                     <img class="h-8 w-auto" src="http://localhost:3000/_nuxt/assets/logo/logo.svg"
@@ -176,13 +174,13 @@ const sidebarOpen = ref(false)
             </div>
 
             <main>
-                <div class="bg-gray-100">
+                <div class="bg-gray-100 h-screen">
                     <div class="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-                        <!-- Replace with your content -->
+                        <!-- Content -->
                         <div class="py-2">
                             <slot />
                         </div>
-                        <!-- /End replace -->
+                        <!-- /End -->
                     </div>
                 </div>
             </main>

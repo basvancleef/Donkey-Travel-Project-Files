@@ -42,12 +42,11 @@
           <div class="px-5 pt-5 pb-6">
             <div class="flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt="Your Company" />
+                <img class="h-8 w-auto" src="../assets/logo/logo.svg" alt="Donkey Travel" />
               </div>
               <div class="-mr-2">
                 <PopoverButton
-                  class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-red-500">
                   <span class="sr-only">Close menu</span>
                   <XIcon class="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
@@ -73,12 +72,12 @@
           <div class="space-y-6 py-6 px-5">
             <div>
               <a href="http://localhost/register"
-                class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Registreren
+                class="flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700">Registreren
               </a>
               <p class="mt-6 text-center text-base font-medium text-gray-500">
                 Bestaande klant?
                 {{ ' ' }}
-                <a href="http://localhost/login" class="text-indigo-600 hover:text-indigo-500">Login</a>
+                <a href="http://localhost/login" class="text-red-600 hover:text-red-500">Login</a>
               </p>
             </div>
           </div>
