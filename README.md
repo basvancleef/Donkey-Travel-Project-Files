@@ -40,6 +40,7 @@ FormKit: https://formkit.com/<br>
 SwiperJS: https://swiperjs.com/<br>
 TsParticles: https://particles.js.org/<br>
 DayJS: https://day.js.org/docs/en/installation/node-js<br>
+Spatie: https://spatie.be/docs/laravel-permission/v5/basic-usage/basic-usage<br>
 
 ## Git
 Let op: Elke dag commits maken en pushen in Fork. Dit doe je in je eigen branch. Alles volgens de conventional commits. (Zie link hieronder) Kijk goed bij wat je doet: feat, fix, style, chore etc.
