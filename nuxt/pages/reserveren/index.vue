@@ -1,6 +1,7 @@
 <template>
   <div>
-
+    <booking-info-section />
+    <booking-book-form />
   </div>
 </template>
 
