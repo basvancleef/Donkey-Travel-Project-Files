@@ -16,6 +16,8 @@ Install WSL Ubuntu: https://docs.microsoft.com/en-us/windows/wsl/install <br>
 Install Docker: https://docs.docker.com/desktop/windows/wsl/ <br>
 WSL in VSCode: https://code.visualstudio.com/docs/remote/wsl <br> <br>
 
+Eventuele Docker tutorial: https://docs.docker.com/get-started/ <br>
+
 
 ## Commands
 
