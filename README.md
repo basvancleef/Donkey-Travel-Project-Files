@@ -8,7 +8,14 @@ Programs you need to start.
 - Fork: https://git-fork.com/
 - GitHub: https://github.com/
 - Debian: Download from Microsoft Store
-- WSL: 
+
+## WSL (Windows Subsystem Linux) - Dev environment <br>
+WSL Installation Documentations. Read and execute. <br>
+
+Install WSL Ubuntu: https://docs.microsoft.com/en-us/windows/wsl/install <br>
+Install Docker: https://docs.docker.com/desktop/windows/wsl/ <br>
+WSL in VSCode: https://code.visualstudio.com/docs/remote/wsl <br> <br>
+
 
 ## Commands
 
