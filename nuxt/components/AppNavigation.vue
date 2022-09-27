@@ -16,7 +16,6 @@
           </PopoverButton>
         </div>
         <PopoverGroup as="nav" class="hidden space-x-10 md:flex">
-
           <nuxt-link to="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</nuxt-link>
           <nuxt-link to="/over-ons" class="text-base font-medium text-gray-500 hover:text-gray-900">Over ons
           </nuxt-link>
